@@ -55,7 +55,7 @@ def obtainFrame(name: str, nameOfVideo: str = ""):
 
     directory = "input/" + name + "/" + nameOfVideo
     video = cv2.VideoCapture(directory)
-    numOfFrames = video.get(cv2.CAP_PROP_FRAME_COUNT)
+    numOfFrames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
     randomFrame = None
     ret = False
     frame = None
